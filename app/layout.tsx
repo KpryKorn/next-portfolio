@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " container max-w-3xl bg-bg-light text-black-light dark:bg-bg-dark dark:text-white-dark"
+          " container antialiased max-w-3xl bg-bg-light text-black-light dark:bg-bg-dark dark:text-white-dark"
         }
       >
         <Header />
