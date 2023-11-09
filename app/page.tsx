@@ -17,7 +17,7 @@ export default function Home() {
           building cool things with code. In addition to coding, I am also
           passionate about tech, creative design and motorcycles.
         </p>
-        <div className="flex items-center gap-8 group">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group">
           <ExternalLink href="mailto:sacha@utopiaz.net" text="Email me" />
           <ExternalLink href="#" text="More ways to connect" />
         </div>
