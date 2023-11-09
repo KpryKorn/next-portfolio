@@ -3,7 +3,7 @@ import profilePic from "@/assets/pdp-linkedin-carree-1.jpeg";
 
 export default function HeroImage() {
   return (
-    <div className="flex items-center gap-8">
+    <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
       <figure>
         <Image
           src={profilePic}
@@ -11,7 +11,7 @@ export default function HeroImage() {
           width={85}
           height={85}
           loading="eager"
-          className="rounded-full brightness-110"
+          className="rounded-full brightness-125"
         />
       </figure>
       <div className="flex flex-col gap-2 text-gray-light">

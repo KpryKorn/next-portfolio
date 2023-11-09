@@ -47,7 +47,7 @@ export default function Header() {
             </svg>
           </Link>
         </div>
-        <ul className="flex items-center gap-8 text-gray-light dark:text-gray-dark text-sm">
+        <ul className="hidden md:flex items-center gap-8 text-gray-light dark:text-gray-dark text-sm">
           {routes.map((route) => {
             return (
               <li key={route.name}>
