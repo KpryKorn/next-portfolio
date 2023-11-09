@@ -51,7 +51,12 @@ export default function Header() {
           {routes.map((route) => {
             return (
               <li key={route.name}>
-                <Link href={route.path}>{route.name}</Link>
+                <Link
+                  href={route.path}
+                  className="hover:text-black-light transition-colors"
+                >
+                  {route.name}
+                </Link>
               </li>
             );
           })}
