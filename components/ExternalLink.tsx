@@ -7,7 +7,7 @@ interface ExternalLinkProps {
 
 export default function ExternalLink({ href, text }: ExternalLinkProps) {
   return (
-    <span className="flex items-center gap-2 text-gray-light group-hover:opacity-60 hover:!opacity-100 hover:text-black transition-opacity">
+    <span className="flex items-center gap-2 text-gray-light group-hover:opacity-60 hover:!opacity-100 hover:text-black transition-all">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
