@@ -18,7 +18,7 @@ export default function Home() {
           passionate about tech, creative design and motorcycles.
         </p>
         <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group">
-          <ExternalLink href="mailto:sacha@utopiaz.net" text="Email me" />
+          <ExternalLink href="mailto:roffinisacha@gmail.com" text="Email me" />
           <ExternalLink href="#" text="More ways to connect" />
         </div>
       </article>
