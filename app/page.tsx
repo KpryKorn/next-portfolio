@@ -14,8 +14,8 @@ export default function Home() {
         <HeroImage />
         <p className="max-w-lg">
           Hi, I'm Sacha Roffini, a software engineer (in the making) who loves
-          building cool things with code. In addition to coding, I am also
-          passionate about tech, creative design and motorcycles.
+          building cool things with code. <br /> In addition to coding, I am
+          also passionate about tech, creative design and motorcycles.
         </p>
         <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group">
           <ExternalLink href="mailto:roffinisacha@gmail.com" text="Email me" />
