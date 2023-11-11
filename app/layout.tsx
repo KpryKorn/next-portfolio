@@ -1,10 +1,8 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "@/assets/globals.css";
 import Header from "@/components/Header";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio - Sacha Roffini",
@@ -21,7 +19,7 @@ export default function RootLayout({
     <html lang="fr">
       <body
         className={
-          inter.className +
+          GeistSans.className +
           " container antialiased max-w-3xl bg-bg-light text-black-light dark:bg-bg-dark dark:text-white-dark"
         }
       >
