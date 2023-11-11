@@ -6,23 +6,12 @@ import ShowLastPosts from "@/components/ShowLastPosts";
 export default function Home() {
   return (
     <>
-      <article className="my-6 md:my-12 flex flex-col gap-8">
-        <HeroTitle
-          title="Sacha Roffini"
-          subtitle="I write code and ride motorcycles."
-        />
-        <HeroImage />
-        <p className="max-w-lg">
-          Hi, I'm Sacha Roffini, a software engineer (in the making) who loves
-          building cool things with code. In addition to coding, I am also
-          passionate about tech, creative design and motorcycles.
-        </p>
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group">
-          <ExternalLink href="mailto:roffinisacha@gmail.com" text="Email me" />
-          <ExternalLink href="#" text="More ways to connect" />
-        </div>
-      </article>
-      <ShowLastPosts />
+      <span className="text-6xl md:text-8xl">👷‍♂️</span>
+      <div className="flex space-x-2 justify-center items-end">
+        <div className="h-3 w-3 bg-orange-500 dark:bg-white rounded-full animate-bounce [animation-delay:-0.45s]"></div>
+        <div className="h-3 w-3 bg-orange-500 dark:bg-white rounded-full animate-bounce [animation-delay:-0.30s]"></div>
+        <div className="h-3 w-3 bg-orange-500 dark:bg-white rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+      </div>
     </>
   );
 }

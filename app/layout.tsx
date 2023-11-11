@@ -25,8 +25,10 @@ export default function RootLayout({
           " container antialiased max-w-3xl bg-bg-light text-black-light dark:bg-bg-dark dark:text-white-dark"
         }
       >
-        <Header />
-        <main className="my-6 md:my-12">{children}</main>
+        {/* <Header /> */}
+        <main className="my-6 md:my-12 flex flex-col items-center justify-center gap-12 h-screen">
+          {children}
+        </main>
         <Analytics />
       </body>
     </html>
