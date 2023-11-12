@@ -30,7 +30,7 @@ export default function ShowLastPosts() {
       <ul className="flex flex-col gap-6 group/container">
         <li className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group-hover/container:opacity-60 hover:!opacity-100 transition-opacity group/item">
           <div
-            className="max-w-[300px] hidden absolute group-hover/item:block z-10"
+            className="max-w-[300px] absolute z-10 scale-0 group-hover/item:scale-100 origin-bottom transition-transform ease-[cubic-bezier(.25,.75,.5,1.25)]"
             style={imageStyle}
           >
             <Image
@@ -48,7 +48,7 @@ export default function ShowLastPosts() {
         </li>
         <li className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group-hover/container:opacity-60 hover:!opacity-100 transition-opacity group/item">
           <div
-            className="max-w-[300px] hidden absolute group-hover/item:block z-10"
+            className="max-w-[300px] absolute z-10 scale-0 group-hover/item:scale-100 origin-bottom transition-transform ease-[cubic-bezier(.25,.75,.5,1.25)]"
             style={imageStyle}
           >
             <Image
@@ -66,7 +66,7 @@ export default function ShowLastPosts() {
         </li>
         <li className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group-hover/container:opacity-60 hover:!opacity-100 transition-opacity group/item">
           <div
-            className="max-w-[300px] hidden absolute group-hover/item:block z-10"
+            className="max-w-[300px] absolute z-10 scale-0 group-hover/item:scale-100 origin-bottom transition-transform ease-[cubic-bezier(.25,.75,.5,1.25)]"
             style={imageStyle}
           >
             <Image
