@@ -23,7 +23,7 @@ export default function Header() {
   ];
 
   return (
-    <header>
+    <header className="relative md:sticky top-0 z-20 bg-bg-light dark:bg-bg-dark">
       <nav className="py-6 flex items-center justify-between">
         <div>
           <Link href={"/"}>
