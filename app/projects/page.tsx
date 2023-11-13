@@ -10,7 +10,7 @@ export default function Page() {
     <>
       <HeroTitle
         title="Projects"
-        subtitle="Here are some of the projects I've worked on"
+        subtitle="Here are some of the projects I've worked on."
       />
       <div className="my-6 md:my-12 py-6 md:py-12 flex flex-col gap-12">
         <article>
