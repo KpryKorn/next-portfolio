@@ -11,7 +11,7 @@ export default function ShowLastPosts() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: any) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
+    setMousePosition({ x: e.clientX, y: e.clientY + window.scrollY });
   };
 
   useEffect(() => {
@@ -37,6 +37,7 @@ export default function ShowLastPosts() {
               loading="eager"
               src={imgArticle1}
               width={300}
+              height={169}
               alt="Couverture de l'article du blog"
               className="rounded-lg object-cover object-center aspect-video"
             />
@@ -55,6 +56,7 @@ export default function ShowLastPosts() {
               loading="eager"
               src={imgArticle2}
               width={300}
+              height={169}
               alt="Couverture de l'article du blog"
               className="rounded-lg object-cover object-center aspect-video"
             />
@@ -73,6 +75,7 @@ export default function ShowLastPosts() {
               loading="eager"
               src={imgArticle3}
               width={300}
+              height={169}
               alt="Couverture de l'article du blog"
               className="rounded-lg object-cover object-center aspect-video"
             />
