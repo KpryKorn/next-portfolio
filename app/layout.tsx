@@ -5,7 +5,7 @@ import "@/assets/globals.css";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Sacha Roffini",
+  title: "Portfolio | Sacha Roffini",
   description:
     "Portfolio de Sacha Roffini, ingénieur d'études et développement chez MGEN Technologies",
 };
