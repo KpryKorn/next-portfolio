@@ -29,14 +29,15 @@ const Dropdown = () => {
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className="min-w-[150px] flex flex-col gap-2 bg-bg-light text-gray-light font-medium rounded-md p-1 z-[1000] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
+          className="min-w-[150px] flex flex-col gap-1 bg-bg-light text-gray-light text-sm p-1 rounded-md z-[1000] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
           sideOffset={5}
+          align="end"
         >
           <Link
             href={"/about"}
             className="hover:bg-gray-light/10 transition-colors rounded-sm"
           >
-            <DropdownMenu.Item className="group text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1">
+            <DropdownMenu.Item className="leading-none rounded-[3px] flex items-center h-[25px] p-4 relative select-none outline-none">
               About
             </DropdownMenu.Item>
           </Link>
@@ -44,7 +45,7 @@ const Dropdown = () => {
             href={"/blog"}
             className="hover:bg-gray-light/10 transition-colors rounded-sm"
           >
-            <DropdownMenu.Item className="group text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1">
+            <DropdownMenu.Item className="leading-none rounded-[3px] flex items-center h-[25px] p-4 relative select-none outline-none">
               Blog
             </DropdownMenu.Item>
           </Link>
@@ -52,7 +53,7 @@ const Dropdown = () => {
             href={"/moto"}
             className="hover:bg-gray-light/10 transition-colors rounded-sm"
           >
-            <DropdownMenu.Item className="group text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1">
+            <DropdownMenu.Item className="leading-none rounded-[3px] flex items-center h-[25px] p-4 relative select-none outline-none">
               Moto
             </DropdownMenu.Item>
           </Link>
@@ -60,7 +61,7 @@ const Dropdown = () => {
             href={"/projects"}
             className="hover:bg-gray-light/10 transition-colors rounded-sm"
           >
-            <DropdownMenu.Item className="group text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1">
+            <DropdownMenu.Item className="leading-none rounded-[3px] flex items-center h-[25px] p-4 relative select-none outline-none">
               Projects
             </DropdownMenu.Item>
           </Link>
