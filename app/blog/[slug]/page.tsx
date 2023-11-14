@@ -1,5 +1,6 @@
 import { allPosts } from "contentlayer/generated";
 import type { Metadata, ResolvingMetadata } from "next";
+import { getMDXComponent } from "next-contentlayer/hooks";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -43,6 +44,8 @@ export default async function Post({ params }: { params: { slug: string } }) {
     notFound();
   }
 
+  const MDXContent = getMDXComponent(post.body.code);
+
   return (
     <div className="flex flex-col gap-20">
       <article>
@@ -76,7 +79,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
               width={700}
               height={350}
               className="-ml-6 w-[calc(100%+48px)] max-w-none animate-in md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)]"
-              style={{ "--index": 2 } as React.CSSProperties}
               priority
               quality={100}
             />
@@ -84,7 +86,9 @@ export default async function Post({ params }: { params: { slug: string } }) {
         )}
 
         <div className="h-16" />
-        <div className="prose prose-neutral animate-in"></div>
+        <div className="prose prose-neutral animate-in">
+          <MDXContent />
+        </div>
       </article>
 
       <Link href="/blog">← All Posts</Link>
