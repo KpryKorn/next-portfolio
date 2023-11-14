@@ -1,3 +1,4 @@
+import ShowLastPosts from "@/components/ShowLastPosts";
 import { allPosts } from "contentlayer/generated";
 import type { Metadata, ResolvingMetadata } from "next";
 import { getMDXComponent } from "next-contentlayer/hooks";
@@ -90,6 +91,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           <MDXContent />
         </div>
       </article>
+      <ShowLastPosts />
 
       <Link href="/blog">← All Posts</Link>
     </div>
