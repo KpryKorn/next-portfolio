@@ -1,9 +1,9 @@
+import HeroTitle from "@/components/HeroTitle";
 import ShowLastPosts from "@/components/ShowLastPosts";
 import { allPosts } from "contentlayer/generated";
 import type { Metadata, ResolvingMetadata } from "next";
 import { getMDXComponent } from "next-contentlayer/hooks";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface generateMetadataProps {
@@ -48,52 +48,22 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const MDXContent = getMDXComponent(post.body.code);
 
   return (
-    <div className="flex flex-col gap-20">
-      <article>
-        <div className="flex animate-in flex-col gap-8">
-          <div className="max-w-xl space-y-2">
-            <h1 className="text-3xl font-bold leading-tight tracking-tight text-primary">
-              {post.title}
-            </h1>
-            <p className="text-lg leading-tight text-secondary md:text-xl">
-              {post.summary}
-            </p>
-          </div>
-
-          <div className="flex max-w-none items-center gap-4">
-            <div className="leading-tight">
-              <p className="font-medium text-primary">Brian Ruiz</p>
-              <p className="text-secondary">
-                <time dateTime={post.publishedAt}>{post.publishedAt}</time>
-                {post.updatedAt ? `(Updated ${post.updatedAt})` : ""}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {post.image && (
-          <>
-            <div className="h-8" />
-            <Image
-              src={post.image}
-              alt={`${post.title} post image`}
-              width={700}
-              height={350}
-              className="-ml-6 w-[calc(100%+48px)] max-w-none animate-in md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)]"
-              priority
-              quality={100}
-            />
-          </>
-        )}
-
-        <div className="h-16" />
-        <div className="prose prose-neutral animate-in">
-          <MDXContent />
-        </div>
+    <>
+      <HeroTitle title={post.title} subtitle={post.summary} />
+      <div className="pt-6 flex gap-2">
+        <p className="font-medium">Sacha Roffini</p>
+        <span>•</span>
+        <p className="text-gray-light">
+          <time className="mr-2" dateTime={post.publishedAt}>
+            {post.publishedAt}
+          </time>
+          {post.updatedAt ? `(Updated at ${post.updatedAt})` : ""}
+        </p>
+      </div>
+      <article className="my-6 md:my-12 flex flex-col gap-4 md:gap-8">
+        <MDXContent />
       </article>
       <ShowLastPosts />
-
-      <Link href="/blog">← All Posts</Link>
-    </div>
+    </>
   );
 }
