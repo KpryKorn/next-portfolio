@@ -18,8 +18,8 @@ export default function AboutWorkItem({
       <figure className="flex gap-4 w-full py-2">
         <Image
           src={imgSrc}
-          width={50}
-          height={50}
+          width={100}
+          height={100}
           alt={jobTitle}
           className="rounded-full object-cover object-center w-[50px] h-[50px]"
         />
