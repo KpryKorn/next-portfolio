@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
 import { allPosts } from "@/.contentlayer/generated";
 
 export default function ShowLastPosts() {
@@ -22,9 +21,6 @@ export default function ShowLastPosts() {
     top: mousePosition.y - 200,
     left: mousePosition.x - 150,
   };
-
-  const params = useParams();
-  const post = allPosts.find((post) => post.slug === params.slug);
 
   return (
     <section className="py-6 md:py-12 flex flex-col gap-12 text-gray-light">
