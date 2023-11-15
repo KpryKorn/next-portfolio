@@ -12,13 +12,13 @@ export default function Page() {
       <div className="my-6 md:my-12 py-6 md:py-12 flex flex-col gap-12">
         <article>
           <Link href={"/"}>
-            <figure className="flex gap-8">
+            <figure className="flex flex-col md:flex-row gap-4 md:gap-8">
               <Image
                 src={"/chien.webp"}
                 width={300}
                 height={169}
                 alt="Couverture de l'article du blog"
-                className="rounded-lg object-cover object-center aspect-video"
+                className="rounded-lg w-full object-cover object-center aspect-video"
               />
               <figcaption className="flex flex-col gap-2">
                 <div className="flex gap-2 items-center">
@@ -38,19 +38,19 @@ export default function Page() {
         </article>
         <article>
           <Link href={"/"}>
-            <figure className="flex gap-8">
+            <figure className="flex flex-col md:flex-row gap-4 md:gap-8">
               <Image
-                src={"/degrade-3.jpg"}
+                src={"/degrade-1.jpg"}
                 width={300}
                 height={169}
                 alt="Couverture de l'article du blog"
-                className="rounded-lg object-cover object-center aspect-video"
+                className="rounded-lg w-full object-cover object-center aspect-video"
               />
               <figcaption className="flex flex-col gap-2">
                 <div className="flex gap-2 items-center">
                   <h2 className="text-xl font-medium">Project n°2</h2>
                   <span className="text-sm">•</span>
-                  <span className="text-gray-light">2023</span>
+                  <span className="text-gray-light">2022</span>
                 </div>
                 <p className="text-gray-light">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -64,21 +64,19 @@ export default function Page() {
         </article>
         <article>
           <Link href={"/"}>
-            <figure className="flex gap-8">
+            <figure className="flex flex-col md:flex-row gap-4 md:gap-8">
               <Image
-                src={"/degrade-2.jpg"}
+                src={"/degrade-3.jpg"}
                 width={300}
                 height={169}
                 alt="Couverture de l'article du blog"
-                className="rounded-lg object-cover object-center aspect-video"
+                className="rounded-lg w-full object-cover object-center aspect-video"
               />
               <figcaption className="flex flex-col gap-2">
                 <div className="flex gap-2 items-center">
-                  <h2 className="text-xl font-medium">
-                    How to self-host a NextJS app
-                  </h2>
+                  <h2 className="text-xl font-medium">Third project</h2>
                   <span className="text-sm">•</span>
-                  <span className="text-gray-light">2023</span>
+                  <span className="text-gray-light">2021</span>
                 </div>
                 <p className="text-gray-light">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
