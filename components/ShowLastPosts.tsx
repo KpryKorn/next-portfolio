@@ -6,8 +6,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { allPosts } from "@/.contentlayer/generated";
 
-import imgArticle1 from "@/assets/unsplash-degrade-1.jpg";
-
 export default function ShowLastPosts() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -44,7 +42,7 @@ export default function ShowLastPosts() {
               >
                 <Image
                   loading="eager"
-                  src={imgArticle1}
+                  src={post.image}
                   width={300}
                   height={169}
                   alt={post.title}
