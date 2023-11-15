@@ -1,8 +1,8 @@
 import HeroTitle from "@/components/HeroTitle";
 import ShowLastPosts from "@/components/ShowLastPosts";
+import MdxWrapper from "@/components/mdx/MdxWrapper";
 import { allPosts } from "contentlayer/generated";
 import type { Metadata, ResolvingMetadata } from "next";
-import { getMDXComponent } from "next-contentlayer/hooks";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -45,8 +45,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  const MDXContent = getMDXComponent(post.body.code);
-
   return (
     <>
       <HeroTitle title={post.title} subtitle={post.summary} />
@@ -57,11 +55,11 @@ export default async function Post({ params }: { params: { slug: string } }) {
           <time className="mr-2" dateTime={post.publishedAt}>
             {post.publishedAt}
           </time>
-          {post.updatedAt ? `(Updated at ${post.updatedAt})` : ""}
+          {post.updatedAt ? `(Updated ${post.updatedAt})` : ""}
         </p>
       </div>
       <article className="my-6 md:my-12 flex flex-col gap-4 md:gap-8">
-        <MDXContent />
+        <MdxWrapper code={post.body.code} />
       </article>
       <ShowLastPosts />
     </>

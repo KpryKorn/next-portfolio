@@ -1,8 +1,5 @@
 import HeroTitle from "@/components/HeroTitle";
 import Image from "next/image";
-import imgArticle1 from "@/assets/unsplash-degrade-1.jpg";
-import imgArticle2 from "@/assets/unsplash-degrade-2.jpg.jpg";
-import imgArticle3 from "@/assets/unsplash-degrade-3.jpg.jpg";
 import Link from "next/link";
 
 export default function Page() {
@@ -17,7 +14,7 @@ export default function Page() {
           <Link href={"/"}>
             <figure className="flex gap-8">
               <Image
-                src={imgArticle1}
+                src={"/chien.webp"}
                 width={300}
                 height={169}
                 alt="Couverture de l'article du blog"
@@ -43,7 +40,7 @@ export default function Page() {
           <Link href={"/"}>
             <figure className="flex gap-8">
               <Image
-                src={imgArticle2}
+                src={"/degrade-3.jpg"}
                 width={300}
                 height={169}
                 alt="Couverture de l'article du blog"
@@ -69,7 +66,7 @@ export default function Page() {
           <Link href={"/"}>
             <figure className="flex gap-8">
               <Image
-                src={imgArticle3}
+                src={"/degrade-2.jpg"}
                 width={300}
                 height={169}
                 alt="Couverture de l'article du blog"
