@@ -67,7 +67,8 @@ export default async function Post({ params }: { params: { slug: string } }) {
             width={850}
             height={480}
             className="-ml-6 w-[calc(100%+48px)] max-w-none md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)] aspect-video object-cover object-center"
-            priority
+            priority={true}
+            quality={100}
           />
         </>
       )}

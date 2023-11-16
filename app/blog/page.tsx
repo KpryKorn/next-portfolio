@@ -27,6 +27,7 @@ export default function Page() {
                 <Link href={`/blog/${post.slug}`}>
                   <figure className="flex flex-col md:flex-row gap-4 md:gap-8">
                     <Image
+                      loading="eager"
                       src={post.image}
                       width={500}
                       height={400}

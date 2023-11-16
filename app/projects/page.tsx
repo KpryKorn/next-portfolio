@@ -26,6 +26,7 @@ export default function Page() {
               <Link href={`/projects/${project.slug}`}>
                 <figure className="flex flex-col md:flex-row gap-2 md:gap-8">
                   <Image
+                    loading="eager"
                     src={project.image}
                     width={500}
                     height={400}
