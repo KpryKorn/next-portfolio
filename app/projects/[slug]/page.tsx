@@ -75,7 +75,7 @@ export default async function Project({
           </svg>
         </Link>
       )}
-      <article className="my-6 md:my-12 flex flex-col gap-4 md:gap-8">
+      <article className="my-6 md:my-12 flex flex-col prose prose-neutral">
         <MdxWrapper code={project.body.code} />
       </article>
       <div className="pt-6">
