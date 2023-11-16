@@ -55,6 +55,7 @@ export default async function Project({
       {project.projectUrl && (
         <Link
           href={project.projectUrl}
+          target="_blank"
           className="py-8 underline underline-offset-4 inline-flex gap-1 items-center"
         >
           Link to the project
