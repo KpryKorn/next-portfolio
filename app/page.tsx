@@ -25,7 +25,7 @@ export default function Home() {
           style={{ "--index": 2 } as React.CSSProperties}
         >
           <ExternalLink href="mailto:roffinisacha@gmail.com" text="Email me" />
-          <ExternalLink href="#" text="More ways to connect" />
+          <ExternalLink href="/links" text="More ways to connect" />
         </div>
       </article>
       <ShowLastPosts />
