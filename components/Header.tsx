@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Dropdown from "./Dropdown";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const routes = [
@@ -22,6 +23,8 @@ export default function Header() {
       path: "/projects",
     },
   ];
+
+  const pathname = usePathname();
 
   return (
     <header className="relative md:sticky top-0 z-20 bg-bg-light dark:bg-bg-dark">
@@ -48,13 +51,17 @@ export default function Header() {
             </svg>
           </Link>
         </div>
-        <ul className="hidden md:flex items-center gap-8 text-gray-light dark:text-gray-dark text-sm">
+        <ul className="hidden md:flex items-center gap-4 text-gray-light dark:text-gray-dark text-sm">
           {routes.map((route) => {
             return (
               <li key={route.name}>
                 <Link
                   href={route.path}
-                  className="hover:text-black-light transition-colors"
+                  className={`hover:text-black-light transition-colors px-3 py-2 rounded-lg ${
+                    pathname === route.path
+                      ? "bg-gray-200 text-black-light"
+                      : ""
+                  }`}
                 >
                   {route.name}
                 </Link>
