@@ -58,7 +58,20 @@ export default async function Post({ params }: { params: { slug: string } }) {
           {post.updatedAt ? `(Updated ${post.updatedAt})` : ""}
         </p>
       </div>
-      <article className="my-6 md:my-12 flex flex-col prose prose-neutral">
+      {post.image && (
+        <>
+          <div className="h-8" />
+          <Image
+            src={post.image}
+            alt={post.title}
+            width={850}
+            height={480}
+            className="-ml-6 w-[calc(100%+48px)] max-w-none md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)] aspect-video object-cover object-center"
+            priority
+          />
+        </>
+      )}
+      <article className="my-6 md:my-12 flex flex-col markdown">
         <MdxWrapper code={post.body.code} />
       </article>
       <ShowLastPosts />
