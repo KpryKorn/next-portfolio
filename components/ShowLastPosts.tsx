@@ -47,7 +47,6 @@ export default function ShowLastPosts() {
                   style={imageStyle}
                 >
                   <Image
-                    loading="eager"
                     src={post.image}
                     width={300}
                     height={169}

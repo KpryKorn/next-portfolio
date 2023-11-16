@@ -18,7 +18,7 @@ export default function MdxImage({
   caption,
 }: MdxImageProps) {
   return (
-    <figure className="flex flex-col gap-2 items-center justify-center">
+    <figure className="my-8 flex flex-col gap-2 items-center justify-center">
       <Image
         src={src}
         width={width}
