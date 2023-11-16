@@ -20,11 +20,11 @@ export default function RootLayout({
       <body
         className={
           GeistSans.className +
-          " container antialiased max-w-3xl bg-bg-light text-black-light dark:bg-bg-dark dark:text-white-dark"
+          " container antialiased bg-bg-light text-black-light dark:bg-bg-dark dark:text-white-dark"
         }
       >
         <Header />
-        <main className="my-6 md:my-12">{children}</main>
+        <main className="max-w-3xl mx-auto my-6 md:my-12">{children}</main>
         <Analytics />
       </body>
     </html>
