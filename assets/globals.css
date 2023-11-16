@@ -15,3 +15,41 @@ img {
 .animate-in {
   animation-delay: calc(var(--index) * 130ms);
 }
+
+.overflow-x-scroll.snap-x::-webkit-scrollbar {
+  /* hide scrollbars with webkit scrollbar */
+  display: none;
+}
+
+.prose hr {
+  @apply border-black-light;
+}
+
+.prose blockquote {
+  @apply border-l-2 border-black-light font-serif text-lg font-light;
+}
+
+.prose h2 {
+  @apply mb-4 text-xl md:text-2xl;
+}
+
+.prose h3 {
+  @apply mb-2 mt-[48px] text-lg;
+}
+
+.prose p code {
+  @apply whitespace-pre-line rounded border border-black-light bg-gray-light px-1 font-normal  text-black-light dark:bg-gray-light/20;
+}
+
+.prose
+  p
+  :where(code):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  )::before,
+.prose
+  p
+  :where(code):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  )::after {
+  content: "";
+}

@@ -24,7 +24,7 @@ export default function Page() {
           return (
             <article key={project._id}>
               <Link href={`/projects/${project.slug}`}>
-                <figure className="flex flex-col md:flex-row gap-4 md:gap-8">
+                <figure className="flex flex-col md:flex-row gap-2 md:gap-8">
                   <Image
                     src={project.image}
                     width={500}
@@ -32,11 +32,11 @@ export default function Page() {
                     alt={project.title}
                     className="rounded-lg w-full md:w-2/5 object-cover object-center aspect-video"
                   />
-                  <figcaption className="flex flex-col gap-2">
+                  <figcaption className="flex flex-col gap-1">
                     <div className="flex gap-2 items-center">
                       <h2 className="text-xl font-medium">{project.title}</h2>
                       <span className="text-sm">•</span>
-                      <span className="text-gray-light">
+                      <span className="text-gray-light self-end">
                         {project.publishedAt}
                       </span>
                     </div>
