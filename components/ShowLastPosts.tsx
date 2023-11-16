@@ -29,35 +29,42 @@ export default function ShowLastPosts() {
     >
       <h2>Latest Posts</h2>
       <ul className="flex flex-col gap-6 group/container">
-        {allPosts.slice(0, 3).map((post) => {
-          return (
-            <li
-              key={post._id}
-              className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group-hover/container:opacity-60 hover:!opacity-100 transition-opacity group/item"
-            >
-              <div
-                className="max-w-[300px] absolute z-10 scale-0 group-hover/item:scale-100 origin-bottom transition-transform ease-[cubic-bezier(.25,.75,.5,1.25)]"
-                style={imageStyle}
+        {allPosts
+          .sort(
+            (a, b) =>
+              new Date(b.publishedAt).getTime() -
+              new Date(a.publishedAt).getTime()
+          )
+          .filter((_, i) => i < 3)
+          .map((post) => {
+            return (
+              <li
+                key={post._id}
+                className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group-hover/container:opacity-60 hover:!opacity-100 transition-opacity group/item"
               >
-                <Image
-                  loading="eager"
-                  src={post.image}
-                  width={300}
-                  height={169}
-                  alt={post.title}
-                  className="rounded-lg object-cover object-center aspect-video"
-                />
-              </div>
-              <span className="md:w-32">{post.publishedAt}</span>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="text-black-light font-medium"
-              >
-                {post.title}
-              </Link>
-            </li>
-          );
-        })}
+                <div
+                  className="max-w-[300px] absolute z-10 scale-0 group-hover/item:scale-100 origin-bottom transition-transform ease-[cubic-bezier(.25,.75,.5,1.25)]"
+                  style={imageStyle}
+                >
+                  <Image
+                    loading="eager"
+                    src={post.image}
+                    width={300}
+                    height={169}
+                    alt={post.title}
+                    className="rounded-lg object-cover object-center aspect-video"
+                  />
+                </div>
+                <span className="md:w-32">{post.publishedAt}</span>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="text-black-light font-medium"
+                >
+                  {post.title}
+                </Link>
+              </li>
+            );
+          })}
       </ul>
       <Link
         href={"/blog"}
