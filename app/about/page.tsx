@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <>
       <HeroTitle title="About Me" subtitle="...but who am I ?" />
-      <AboutSection title="About">
+      <AboutSection title="About" index={1}>
         <p>Hello World, I'm Sacha Roffini!</p>
         <p>
           I have a passion for design and am always looking for ways to
@@ -25,7 +25,7 @@ export default function Page() {
           friends, or watching a movie :)
         </p>
       </AboutSection>
-      <AboutSection title="Connect">
+      <AboutSection title="Connect" index={2}>
         <p>You can find me here:</p>
         <div className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-2 w-full group">
           <AboutConnectItem
@@ -110,7 +110,7 @@ export default function Page() {
           />
         </div>
       </AboutSection>
-      <AboutSection title="Work">
+      <AboutSection title="Work" index={3}>
         <p className="pb-4">
           2+ years of professionnal development experience.
         </p>

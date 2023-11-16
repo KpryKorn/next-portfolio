@@ -12,12 +12,18 @@ export default function Home() {
           subtitle="I write code and ride motorcycles."
         />
         <HeroImage />
-        <p className="max-w-lg">
+        <p
+          className="max-w-lg animate-in"
+          style={{ "--index": 1 } as React.CSSProperties}
+        >
           Hi, I'm Sacha Roffini, a software engineer (in the making) who loves
           building cool things with code. <br /> In addition to coding, I am
           also passionate about tech, creative design and motorcycles.
         </p>
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group">
+        <div
+          className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 group animate-in"
+          style={{ "--index": 2 } as React.CSSProperties}
+        >
           <ExternalLink href="mailto:roffinisacha@gmail.com" text="Email me" />
           <ExternalLink href="#" text="More ways to connect" />
         </div>

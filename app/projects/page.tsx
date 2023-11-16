@@ -16,7 +16,10 @@ export default function Page() {
         title="Projects"
         subtitle="Here are some of the projects I've worked on."
       />
-      <div className="my-6 md:my-12 py-6 md:py-12 flex flex-col-reverse gap-12">
+      <div
+        className="my-6 md:my-12 py-6 md:py-12 flex flex-col-reverse gap-12 animate-in"
+        style={{ "--index": 1 } as React.CSSProperties}
+      >
         {allProjects.map((project) => {
           return (
             <article key={project._id}>

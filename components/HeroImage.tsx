@@ -3,7 +3,10 @@ import profilePic from "@/assets/pdp-linkedin-carree-1.jpeg";
 
 export default function HeroImage() {
   return (
-    <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
+    <div
+      className="flex flex-col md:flex-row items-start md:items-center gap-8 animate-in"
+      style={{ "--index": 1 } as React.CSSProperties}
+    >
       <figure>
         <Image
           src={profilePic}

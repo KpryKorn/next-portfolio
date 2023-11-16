@@ -11,3 +11,7 @@ body {
 img {
   max-width: 100%;
 }
+
+.animate-in {
+  animation-delay: calc(var(--index) * 130ms);
+}

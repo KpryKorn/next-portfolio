@@ -23,7 +23,10 @@ export default function ShowLastPosts() {
   };
 
   return (
-    <section className="py-6 md:py-12 flex flex-col gap-12 text-gray-light">
+    <section
+      className="py-6 md:py-12 flex flex-col gap-12 text-gray-light animate-in"
+      style={{ "--index": 3 } as React.CSSProperties}
+    >
       <h2>Latest Posts</h2>
       <ul className="flex flex-col gap-6 group/container">
         {allPosts.slice(0, 3).map((post) => {
