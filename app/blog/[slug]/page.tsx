@@ -58,7 +58,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           {post.updatedAt ? `(Updated ${post.updatedAt})` : ""}
         </p>
       </div>
-      <article className="my-6 md:my-12 flex flex-col gap-4 md:gap-8">
+      <article className="my-6 md:my-12 flex flex-col prose prose-neutral">
         <MdxWrapper code={post.body.code} />
       </article>
       <ShowLastPosts />
