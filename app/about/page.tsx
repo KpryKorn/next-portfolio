@@ -22,7 +22,7 @@ export default function Page() {
         </p>
         <p>
           When I'm not at my desk I am probably lifting weights, playing with my
-          friends, or watching a movie :)
+          friends, or riding out :)
         </p>
       </AboutSection>
       <AboutSection title="Connect" index={2}>
