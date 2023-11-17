@@ -26,11 +26,11 @@ img {
 }
 
 .markdown blockquote {
-  @apply border-l-2 border-black-light font-serif text-lg font-light;
+  @apply max-w-full border-l-2 pl-4 italic my-4 border-black-light font-serif text-lg font-light;
 }
 
 .markdown h2 {
-  @apply mt-8 mb-4 text-xl md:text-2xl font-semibold;
+  @apply mt-8 mb-1 text-xl md:text-2xl font-semibold;
 }
 
 .markdown h3 {
