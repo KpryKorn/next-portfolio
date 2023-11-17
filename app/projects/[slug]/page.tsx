@@ -83,7 +83,7 @@ export default async function Project({
             alt={project.title}
             width={850}
             height={480}
-            className="-ml-6 w-[calc(100%+48px)] max-w-none md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)] aspect-video object-cover object-center"
+            className="md:-ml-6 md:w-[calc(100%+48px)] max-w-full mx-auto md:max-w-none rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)] aspect-video object-cover object-center"
             priority={true}
             quality={100}
           />
@@ -92,7 +92,8 @@ export default async function Project({
       <article className="my-6 md:my-12 flex flex-col markdown">
         <MdxWrapper code={project.body.code} />
       </article>
-      <div className="pt-6">
+      <div className="py-6 flex flex-col gap-2 items-start">
+        <p>Tags</p>
         <span className="text-gray-light flex items-center gap-2 font-medium">
           {project.tags.map((tag: string) => {
             return (
@@ -106,6 +107,12 @@ export default async function Project({
           })}
         </span>
       </div>
+      <Link href={"/projects"} className="text-black-light font-medium">
+        ←{" "}
+        <span className="underline-offset-4 underline">
+          Return to projects page
+        </span>
+      </Link>
     </>
   );
 }

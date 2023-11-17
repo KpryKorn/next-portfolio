@@ -1,9 +1,9 @@
 import HeroTitle from "@/components/HeroTitle";
-import ShowLastPosts from "@/components/ShowLastPosts";
 import MdxWrapper from "@/components/mdx/MdxWrapper";
 import { allPosts } from "contentlayer/generated";
 import type { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface generateMetadataProps {
@@ -66,7 +66,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
             alt={post.title}
             width={850}
             height={480}
-            className="-ml-6 w-[calc(100%+48px)] max-w-none md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)] aspect-video object-cover object-center"
+            className="md:-ml-6 md:w-[calc(100%+48px)] max-w-full mx-auto md:max-w-none rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)] aspect-video object-cover object-center"
             priority={true}
             quality={100}
           />
@@ -75,7 +75,12 @@ export default async function Post({ params }: { params: { slug: string } }) {
       <article className="my-6 md:my-12 flex flex-col markdown">
         <MdxWrapper code={post.body.code} />
       </article>
-      <ShowLastPosts />
+      <Link href={"/blog"} className="text-black-light font-medium">
+        ←{" "}
+        <span className="underline-offset-4 underline">
+          Return to blog page
+        </span>
+      </Link>
     </>
   );
 }
