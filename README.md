@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Personal Website
 
-## Getting Started
+My personal portfolio website designed to be simplistic and clean while including features like MDX blog posts, a dark mode toggle, an about page, and more.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Backend:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Next.js App Router](nextjs.org) / TypeScript
+- [MDX](https://mdxjs.com) / [Contentlayer](https://contentlayer.dev/) (Blog Posts)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Frontend:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Tailwind CSS](https://tailwindcss.com) (Styling)
+- [Radix Primitives](https://www.radix-ui.com/primitives) (Headless UI components)
+- [TailwindCSS Colors](https://tailwindcss.com/docs/customizing-colors) (Color system)
 
-## Learn More
+## Database Setup
 
-To learn more about Next.js, take a look at the following resources:
+I am not using any DB.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project can be easily deployed to [Vercel](https://vercel.com/new/clone). Simply connect your Vercel account to your GitHub repository, and Vercel will automatically build and deploy your application with each new push to the main branch.

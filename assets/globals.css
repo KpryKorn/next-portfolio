@@ -11,3 +11,39 @@ body {
 img {
   max-width: 100%;
 }
+
+.animate-in {
+  animation-delay: calc(var(--index) * 130ms);
+}
+
+.overflow-x-scroll.snap-x::-webkit-scrollbar {
+  /* hide scrollbars with webkit scrollbar */
+  display: none;
+}
+
+.markdown hr {
+  @apply border-black-light;
+}
+
+.markdown blockquote {
+  @apply max-w-full border-l-2 pl-4 italic my-4 border-black-light font-serif text-lg font-light;
+}
+
+.markdown h2 {
+  @apply mt-8 mb-1 text-xl md:text-2xl font-semibold;
+}
+
+.markdown h3 {
+  @apply mt-4 mb-2 text-lg font-semibold;
+}
+
+.markdown ul {
+  list-style-type: disc;
+  margin: 0;
+  padding: 1rem 0 1rem 2rem;
+}
+.markdown a {
+  text-decoration-line: underline;
+  text-underline-offset: 16px;
+  color: #202020;
+}

@@ -1,13 +1,12 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "@/assets/globals.css";
 import Header from "@/components/Header";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Sacha Roffini",
+  title: "Portfolio | Sacha Roffini",
   description:
     "Portfolio de Sacha Roffini, ingénieur d'études et développement chez MGEN Technologies",
 };
@@ -21,14 +20,14 @@ export default function RootLayout({
     <html lang="fr">
       <body
         className={
-          inter.className +
-          " container antialiased max-w-3xl bg-bg-light text-black-light dark:bg-bg-dark dark:text-white-dark"
+          GeistSans.className +
+          " container antialiased bg-bg-light text-black-light dark:bg-bg-dark dark:text-white-dark"
         }
       >
-        {/* <Header /> */}
-        <main className="my-6 md:my-12 flex flex-col items-center justify-center gap-12 h-screen">
-          {children}
-        </main>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <Header />
+          <main className="max-w-3xl mx-auto my-6 md:my-12">{children}</main>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

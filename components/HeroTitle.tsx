@@ -5,9 +5,9 @@ interface HeroTitleProps {
 
 export default function HeroTitle({ title, subtitle }: HeroTitleProps) {
   return (
-    <div className="pt-6">
+    <div className="pt-6 animate-in">
       <h1 className="text-3xl font-bold tracking-tight">{title}</h1>
-      <p className="text-gray-light">{subtitle}</p>
+      <p className="text-gray-light dark:text-gray-dark">{subtitle}</p>
     </div>
   );
 }

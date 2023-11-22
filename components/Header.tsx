@@ -1,6 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Dropdown from "./Dropdown";
+import { usePathname } from "next/navigation";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Header() {
   const routes = [
@@ -13,18 +16,16 @@ export default function Header() {
       path: "/blog",
     },
     {
-      name: "Moto",
-      path: "/moto",
-    },
-    {
       name: "Projects",
       path: "/projects",
     },
   ];
 
+  const pathname = usePathname();
+
   return (
-    <header>
-      <nav className="flex items-center justify-between py-4">
+    <header className="relative md:sticky top-0 z-20 bg-bg-light dark:bg-bg-dark">
+      <nav className="max-w-3xl mx-auto py-6 flex items-center justify-between">
         <div>
           <Link href={"/"}>
             <svg
@@ -47,13 +48,17 @@ export default function Header() {
             </svg>
           </Link>
         </div>
-        <ul className="hidden md:flex items-center gap-8 text-gray-light dark:text-gray-dark text-sm">
+        <ul className="hidden md:flex items-center gap-4 text-gray-light dark:text-gray-dark text-sm">
           {routes.map((route) => {
             return (
               <li key={route.name}>
                 <Link
                   href={route.path}
-                  className="hover:text-black-light transition-colors"
+                  className={`hover:text-black-light dark:hover:text-white-dark transition-colors px-3 py-2 rounded-lg ${
+                    pathname === route.path
+                      ? "bg-gray-200 text-black-light dark:hover:text-black-light"
+                      : ""
+                  }`}
                 >
                   {route.name}
                 </Link>
@@ -61,30 +66,10 @@ export default function Header() {
             );
           })}
         </ul>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="stroke-gray-light dark:stroke-gray-dark"
-          >
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 3v1" />
-            <path d="M12 20v1" />
-            <path d="M3 12h1" />
-            <path d="M20 12h1" />
-            <path d="m18.364 5.636-.707.707" />
-            <path d="m6.343 17.657-.707.707" />
-            <path d="m5.636 5.636.707.707" />
-            <path d="m17.657 17.657.707.707" />
-          </svg>
-        </span>
+        <div className="flex gap-4 items-center">
+          <Dropdown />
+          <ThemeSwitcher />
+        </div>
       </nav>
     </header>
   );

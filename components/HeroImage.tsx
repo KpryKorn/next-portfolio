@@ -3,7 +3,10 @@ import profilePic from "@/assets/pdp-linkedin-carree-1.jpeg";
 
 export default function HeroImage() {
   return (
-    <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
+    <div
+      className="flex flex-col md:flex-row items-start md:items-center gap-8 animate-in"
+      style={{ "--index": 1 } as React.CSSProperties}
+    >
       <figure>
         <Image
           src={profilePic}
@@ -14,7 +17,7 @@ export default function HeroImage() {
           className="rounded-full brightness-125"
         />
       </figure>
-      <div className="flex flex-col gap-2 text-gray-light">
+      <div className="flex flex-col gap-2 text-gray-light dark:text-gray-dark">
         <div className="flex items-center gap-2">
           <span>
             <svg
@@ -22,15 +25,15 @@ export default function HeroImage() {
               width="20"
               height="20"
               viewBox="0 0 24 24"
-              fill="white"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              className="fill-white dark:fill-black-light"
             >
               <path
                 d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
-                className="fill-gray-light"
+                className="fill-gray-light dark:fill-gray-dark"
               />
               <circle cx="12" cy="10" r="3" />
             </svg>
@@ -52,7 +55,7 @@ export default function HeroImage() {
             >
               <path
                 d="M22 10v6M2 10l10-5 10 5-10 5z"
-                className="fill-gray-light"
+                className="fill-gray-light dark:fill-gray-dark"
               />
               <path d="M6 12v5c3 3 9 3 12 0v-5" />
             </svg>
