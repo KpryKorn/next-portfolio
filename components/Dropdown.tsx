@@ -6,7 +6,7 @@ const Dropdown = () => {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <button
-          className="inline-flex md:hidden items-center justify-center gap-1 text-gray-light"
+          className="inline-flex md:hidden items-center justify-center gap-1 text-gray-light dark:text-gray-dark"
           aria-label="Menu de navigation"
         >
           Menu
@@ -29,7 +29,7 @@ const Dropdown = () => {
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className="min-w-[150px] flex flex-col gap-1 bg-bg-light text-gray-light text-sm p-1 rounded-md z-[1000] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
+          className="min-w-[150px] flex flex-col gap-1 bg-bg-light dark:bg-black text-gray-light dark:text-gray-dark text-sm p-1 rounded-md z-[1000] shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[opacity,transform] data-[side=top]:animate-slideDownAndFade data-[side=right]:animate-slideLeftAndFade data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade"
           sideOffset={10}
           align="end"
         >

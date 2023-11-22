@@ -13,7 +13,7 @@ export default function AboutConnectItem({
 }: AboutConnectProps) {
   return (
     <Link href={href} target="blank">
-      <div className="col-span-1 flex justify-between items-center border border-gray-300 rounded-lg p-4 group-hover:opacity-60 hover:!opacity-100 transition-all">
+      <div className="col-span-1 flex justify-between items-center border border-gray-300 dark:border-gray-light rounded-lg p-4 group-hover:opacity-60 hover:!opacity-100 transition-all">
         <div className="flex gap-4 items-center">
           {icon}
           {title}

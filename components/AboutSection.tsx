@@ -15,7 +15,9 @@ export default function AboutSection({
       style={{ "--index": index } as React.CSSProperties}
     >
       <article className="flex flex-col md:flex-row gap-2 md:gap-9 pb-6">
-        <h2 className="md:w-32 text-gray-light shrink-0">{title}</h2>
+        <h2 className="md:w-32 text-gray-light dark:text-gray-dark shrink-0">
+          {title}
+        </h2>
         <div className="flex flex-col w-full gap-6">{children}</div>
       </article>
     </div>

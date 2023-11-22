@@ -38,11 +38,13 @@ export default function Page() {
                       <div className="flex gap-2 items-center">
                         <h2 className="text-xl font-medium">{post.title}</h2>
                         <span className="text-sm">•</span>
-                        <span className="text-gray-light">
+                        <span className="text-gray-light dark:text-gray-dark">
                           {post.publishedAt}
                         </span>
                       </div>
-                      <p className="text-gray-light">{post.summary}</p>
+                      <p className="text-gray-light dark:text-gray-dark">
+                        {post.summary}
+                      </p>
                     </figcaption>
                   </figure>
                 </Link>

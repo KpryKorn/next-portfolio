@@ -27,7 +27,7 @@ export default function MdxImage({
         loading={loading}
         className="rounded-lg object-cover object-center aspect-video"
       />
-      <figcaption className="text-gray-light text-sm leading-tight">
+      <figcaption className="text-gray-light dark:text-gray-dark text-sm leading-tight">
         {caption}
       </figcaption>
     </figure>

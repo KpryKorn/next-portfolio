@@ -24,7 +24,7 @@ export default function ShowLastPosts() {
 
   return (
     <section
-      className="py-6 md:py-12 flex flex-col gap-12 text-gray-light animate-in"
+      className="py-6 md:py-12 flex flex-col gap-12 text-gray-light dark:text-gray-dark animate-in"
       style={{ "--index": 3 } as React.CSSProperties}
     >
       <h2>Latest Posts</h2>
@@ -57,7 +57,7 @@ export default function ShowLastPosts() {
                 <span className="md:w-32">{post.publishedAt}</span>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="text-black-light font-medium"
+                  className="text-black-light dark:text-white-dark font-medium"
                 >
                   {post.title}
                 </Link>
@@ -67,7 +67,7 @@ export default function ShowLastPosts() {
       </ul>
       <Link
         href={"/blog"}
-        className="underline-offset-4 underline hover:text-black"
+        className="underline-offset-4 underline hover:text-black dark:hover:text-white-dark"
       >
         See All
       </Link>

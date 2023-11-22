@@ -94,12 +94,12 @@ export default async function Project({
       </article>
       <div className="py-6 flex flex-col gap-2 items-start">
         <p>Tags</p>
-        <span className="text-gray-light flex items-center gap-2 font-medium">
+        <span className="text-gray-light dark:text-gray-dark flex items-center gap-2 font-medium">
           {project.tags.map((tag: string) => {
             return (
               <p
                 key={tag}
-                className="whitespace-nowrap rounded-lg bg-gray-light/10 px-4 py-1.5 text-sm capitalize"
+                className="whitespace-nowrap rounded-lg bg-gray-light/10 dark:bg-gray-light/30 px-4 py-1.5 text-sm capitalize"
               >
                 {tag}
               </p>
@@ -107,7 +107,10 @@ export default async function Project({
           })}
         </span>
       </div>
-      <Link href={"/projects"} className="text-black-light font-medium">
+      <Link
+        href={"/projects"}
+        className="text-black-light dark:text-white-dark font-medium"
+      >
         ←{" "}
         <span className="underline-offset-4 underline">
           Return to projects page

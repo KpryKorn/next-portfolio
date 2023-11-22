@@ -51,7 +51,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
       <div className="pt-6 flex gap-2">
         <p className="font-medium">Sacha Roffini</p>
         <span>•</span>
-        <p className="text-gray-light">
+        <p className="text-gray-light dark:text-gray-dark">
           <time className="mr-2" dateTime={post.publishedAt}>
             {post.publishedAt}
           </time>
@@ -75,7 +75,10 @@ export default async function Post({ params }: { params: { slug: string } }) {
       <article className="my-6 md:my-12 flex flex-col markdown">
         <MdxWrapper code={post.body.code} />
       </article>
-      <Link href={"/blog"} className="text-black-light font-medium">
+      <Link
+        href={"/blog"}
+        className="text-black-light dark:text-white-dark font-medium"
+      >
         ←{" "}
         <span className="underline-offset-4 underline">
           Return to blog page

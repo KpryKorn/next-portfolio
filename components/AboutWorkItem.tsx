@@ -26,9 +26,9 @@ export default function AboutWorkItem({
         <figcaption className="flex flex-grow items-start justify-between">
           <div className="flex flex-col">
             <h3>{jobTitle}</h3>
-            <p className="text-gray-light">{companyName}</p>
+            <p className="text-gray-light dark:text-gray-dark">{companyName}</p>
           </div>
-          <p className="text-gray-light">{duration}</p>
+          <p className="text-gray-light dark:text-gray-dark">{duration}</p>
         </figcaption>
       </figure>
     </li>

@@ -37,11 +37,13 @@ export default function Page() {
                     <div className="flex gap-2 items-center">
                       <h2 className="text-xl font-medium">{project.title}</h2>
                       <span className="text-sm">•</span>
-                      <span className="text-gray-light self-end">
+                      <span className="text-gray-light dark:text-gray-dark self-end">
                         {project.publishedAt}
                       </span>
                     </div>
-                    <p className="text-gray-light">{project.summary}</p>
+                    <p className="text-gray-light dark:text-gray-dark">
+                      {project.summary}
+                    </p>
                   </figcaption>
                 </figure>
               </Link>
