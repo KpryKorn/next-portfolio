@@ -50,14 +50,6 @@ const Dropdown = () => {
             </DropdownMenu.Item>
           </Link>
           <Link
-            href={"/moto"}
-            className="hover:bg-gray-light/10 transition-colors rounded-sm"
-          >
-            <DropdownMenu.Item className="leading-none rounded-[3px] flex items-center h-[25px] p-4 relative select-none outline-none">
-              Moto
-            </DropdownMenu.Item>
-          </Link>
-          <Link
             href={"/projects"}
             className="hover:bg-gray-light/10 transition-colors rounded-sm"
           >

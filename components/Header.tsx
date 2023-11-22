@@ -15,10 +15,6 @@ export default function Header() {
       path: "/blog",
     },
     {
-      name: "Moto",
-      path: "/moto",
-    },
-    {
       name: "Projects",
       path: "/projects",
     },
