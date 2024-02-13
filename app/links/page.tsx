@@ -105,7 +105,7 @@ export default function Page() {
             Sacha Roffini
           </h1>
           <p className="max-w-sm text-gray-light dark:text-gray-dark mx-auto text-center">
-            Software engineer (in the making) who loves building cool things
+            Software engineer who loves building cool things
             with code. In addition to coding, I am also passionate about tech,
             creative design and motorcycles.
           </p>
