@@ -30,7 +30,7 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
 
-    <Script src="https://analytics.kprykorn.dev/script.js" data-website-id="249dfb84-b5d0-4e3a-aa42-4a1962fa087a" strategy="beforeInteractive" />
+    <Script defer src="https://analytics.kprykorn.dev/script.js" data-website-id="249dfb84-b5d0-4e3a-aa42-4a1962fa087a" />
     </html>
   );
 }
