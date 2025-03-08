@@ -1,5 +1,5 @@
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { GeistSans } from "geist/font/sans";
 import "@/assets/globals.css";
 import Header from "@/components/Header";
@@ -28,8 +28,9 @@ export default function RootLayout({
           <Header />
           <main className="max-w-3xl mx-auto my-6 md:my-12">{children}</main>
         </ThemeProvider>
-        <Analytics />
       </body>
+
+    <Script src="https://analytics.kprykorn.dev/script.js" data-website-id="249dfb84-b5d0-4e3a-aa42-4a1962fa087a" strategy="beforeInteractive" />
     </html>
   );
 }
