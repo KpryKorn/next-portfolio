@@ -21,7 +21,7 @@ export default function Page() {
           Kawasaki Ninja 400.
         </p>
         <p>
-          When I'm not at my desk I am probably lifting weights, playing with my
+          When I'm not at my desk I am probably lifting weights, playing videogames with my
           friends, or riding out :)
         </p>
       </AboutSection>
